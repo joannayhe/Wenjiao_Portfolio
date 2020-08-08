@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+# Wenjiao Portfolio
+Data Science Portfolio
 
-You can use the [editor on GitHub](https://github.com/joannayhe/Wenjiao_Portfolio/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# [Project 1. Trading Agent for Stock Market](https://github.gatech.edu/whuang98/ML4T/tree/master/ML4T_2020Spring/strategy_evaluation)
+*Project Overview*
+1. Do stock historical data cleaning by Numpy and Pandas
+2. Using reinforcement learning algorithms to train historical data 
+3. Create trading agent which based on historical data to predict future prices and make trading strategies to achieve best portfolio (matplotlib)
+4. Implementing the trading agent by Python
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<img src="./project_images/Experiment1.png" width="350"/>
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/joannayhe/Wenjiao_Portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
