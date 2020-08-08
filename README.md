@@ -6,5 +6,5 @@
 4. Implementing the trading agent by Python
 
 
-<img src="./project_images/Experiment1.png" width="300"/> <img src="./project_images/Experiment2.png" width="300"/>
+<img src="./project_images/Experiment1.png" width="250"/> <img src="./project_images/Experiment2.png" width="250"/>
 
