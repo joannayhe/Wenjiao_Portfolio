@@ -1,7 +1,3 @@
-# Wenjiao Portfolio
-Data Science Portfolio
-
-
 # [Project 1. Trading Agent for Stock Market](https://github.gatech.edu/whuang98/ML4T/tree/master/ML4T_2020Spring/strategy_evaluation)
 *Project Overview*
 1. Do stock historical data cleaning by Numpy and Pandas
