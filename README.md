@@ -9,3 +9,9 @@
 <img src="./project_images/Experiment1.png" width="250"/> <img src="./project_images/Experiment2.png" width="250"/>
 <img src="./project_images/Portfolio Comparison in-sample.png" width="250"/> <img src="./project_images/Portfolio Comparison out-of-sample.png" width="250"/>
 
+
+# [Project 1. Database for Adoption Center](https://github.gatech.edu/whuang98/ML4T/tree/master/ML4T_2020Spring/strategy_evaluation)
+*Project Overview*
+1. Designed Information Flow Diagram (IFD) and Enhanced Entity-Relationship (EER) Diagram for the adoption center
+2. Wrote SQL to implement the logic on the database. Including login, register, add new data, query data from database, etc.
+3. Design and implement the front end UI and back end database by Python and MySQL.
