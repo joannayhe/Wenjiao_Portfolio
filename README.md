@@ -21,7 +21,7 @@
 <img src="./project_images/report1.GIF" width="250" height="150"/> <img src="./project_images/report2.GIF" width="250" height="150"/>
 
 
-# Project 3. Search Keywords and Faces from Newspaper Images
+# [Project 3. Search Keywords and Faces from Newspaper Images](https://github.com/joannayhe/Wenjiao_Portfolio/tree/master/face_recognition)
 *Project Overview*
 1. Input a keyword and search through the newspaper images for the occurrences of keywords and faces
 2. The result shoule return a contact sheet of all of the faces which were located on the newspaper page which mentions the imput keyword (implement by OpenCV, PIL)
