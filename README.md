@@ -10,7 +10,7 @@
 <img src="./project_images/Portfolio Comparison in-sample.png" width="250"/> <img src="./project_images/Portfolio Comparison out-of-sample.png" width="250"/>
 
 
-# [Project 2. Database for Adoption Center](https://github.gatech.edu/whuang98/ML4T/tree/master/ML4T_2020Spring/strategy_evaluation)
+# [Project 2. Database for Adoption Center](https://github.com/joannayhe/Wenjiao_Portfolio/tree/master/Adoption_Center)
 *Project Overview*
 1. Designed Information Flow Diagram (IFD) and Enhanced Entity-Relationship (EER) Diagram for the adoption center
 2. Wrote SQL to implement the logic on the database. Including login, register, add new data, query data from database, etc.
