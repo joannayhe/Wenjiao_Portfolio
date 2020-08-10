@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110"> 
+                                <table data-vertable="ver2">
+                                    <form method="POST" action="">
+                                        <input type="hidden" name="currentapp" value="{{ request.args.get('appID')}}">
+                                        <input type="hidden" name="dogidval" value="{{ dogid }}">
+                                        <tr>
+                                            <td>Adopter First Name</td> <td>{{Applications.AdopterFname}} </td></tr>
+                                            <tr>
+                                            <td>Adopter Last Name</td><td> {{Applications.AdopterLname}} </td></tr>
+                                            <tr><td>Co-Applicant First Name</td><td> {{Applications.Co_Fname}} </td></tr>
+                                            <tr>
+                                            <td>Co-Applicant Last Name</td><td> {{Applications.Co_Lname}} </td></tr>
+                                            <tr><td>Adopter Email</td><td> {{Applications.AdopterEmail}} </td></tr>
+                                            <tr><td>{{ form.appreview.label (class="frm-lbl")}}
+                                        </td><td> {{ form.appreview (class="frm-inpt")}}</td>                       
+                                        </tr>
+                                    <tr><td>
+                                         {{ form.submit (class="frm-inpt")}}
+                                    </td>
+                                    </tr>
+                                    </form>
+                                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+

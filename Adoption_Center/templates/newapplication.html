@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110"> 
+
+                                    <table>
+                                        <legend>Fill Out a New Adoption Application</legend>
+
+                                        <form method="POST" action"">
+                                            <fieldset> 
+                                            {{ form.hidden_tag() }}
+                                            <div id="dogentry">
+                                            {{ form.AdopterEmail.label (class="frm-lbl")}}
+                                            {{ form.AdopterEmail (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.AdopterFName.label (class="frm-lbl")}}
+                                            {{ form.AdopterFName (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.AdopterLName.label (class="frm-lbl")}}
+                                            {{ form.AdopterLName (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.AdPhoneNumber.label (class="frm-lbl")}}
+                                            {{ form.AdPhoneNumber (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.Street.label (class="frm-lbl")}}
+                                            {{ form.Street (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.City.label (class="frm-lbl")}}
+                                            {{ form.City (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.State.label (class="frm-lbl")}}
+                                            {{ form.State (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.Zip.label (class="frm-lbl")}}
+                                            {{ form.Zip(class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.Co_Fname.label (class="frm-lbl")}}
+                                            {{ form.Co_Fname (class="frm-inpt")}}
+                                            </div>
+                                            <div id="dogentry">
+                                            {{ form.Co_Lname.label (class="frm-lbl")}}
+                                            {{ form.Co_Lname (class="frm-inpt")}}
+                                            </div>                                    
+                                            <div id="dogentry2">
+                                            {{ form.submit}}
+                                            </div>
+                                    
+                                            </fieldset>
+                                        </form>
+
+                                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110">
+                	<table>
+				       <tr>
+				        <td> Applicant Last Name</td>
+				        <td> Co-Applicant Last Name</a></td>
+				        </tr>
+				    {% for user in r %}
+				       <tr>
+				        <td> <a href="adoptionfee?dogid={{dogid }}&appnum={{user.ApplicationNumber}}"> {{user.AdopterLName}} </a></td>
+				        <td> <a href="adoptionfee?dogid={{dogid }}&appnum={{user.ApplicationNumber}}"> {{user.Co_Lname}} </a></td>
+				        </tr>
+				    {% endfor %}
+					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block register %}
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<tbody>
+							<tr>
+								<td >
+									<form method="POST" action"">
+										{{ form.hidden_tag() }}
+										<fieldset> 
+											<legend>Add Volunteer User</legend>
+
+											<div id="formentry">
+											{{ form.email.label (class="frm-lbl")}}
+											{% if form.email.error %}
+												{%for error in form.username.errors %}
+													<span> {{ error }} </span>
+												{% endfor %}
+											{% endif %}
+											{{ form.email  (class="frm-inpt")}}
+											</div>
+
+											<div id="formentry">
+											{{ form.password.label (class="frm-lbl")}}
+											{% if form.password.error %}
+												{%for error in form.password.errors %}
+													<span> {{ error }} </span>
+												{% endfor %}
+											{% endif %}
+											{{ form.password (class="frm-inpt")}}
+											</div>
+
+											<div id="formentry">
+											{{ form.confirm_password.label (class="frm-lbl")}}
+											{% if form.confirm_password.error %}
+												{%for error in form.confirm_password.errors %}
+													<span> {{ error }} </span>
+												{% endfor %}
+											{% endif %}
+											{{ form.confirm_password  (class="frm-inpt")}}
+										</div>
+
+											<div id="formentry">
+											{{ form.FirstName.label (class="frm-lbl")}}
+											{% if form.FirstName.error %}
+												{%for error in form.FirstName.errors %}
+													<span> {{ error }} </span>
+												{% endfor %}
+											{% endif %}
+											{{ form.FirstName  (class="frm-inpt")}}
+										</div>
+
+											<div id="formentry">
+											{{ form.LastName.label (class="frm-lbl")}}
+											{% if form.LastName.error %}
+												{%for error in form.LastName.errors %}
+													<span> {{ error }} </span>
+												{% endfor %}
+											{% endif %}
+											{{ form.LastName  (class="frm-inpt")}}
+										</div>
+
+											<div id="formentry">
+											{{ form.PhoneNumber.label (class="frm-lbl")}}
+											{% if form.PhoneNumber.error %}
+												{%for error in form.PhoneNumber.errors %}
+													<span> {{ error }} </span>
+												{% endfor %}
+											{% endif %}
+											{{ form.PhoneNumber  (class="frm-inpt")}}
+										</div>
+
+										<div id="formentry">
+											{{ form.IsAdmin.label (class="frm-lbl")}}
+											{{ form.IsAdmin  (class="frm-inpt")}}
+										</div>
+										</fieldset>
+
+										<div id="formentry">
+										<small>Complete Volunteer Signup</small>{{ form.submit(class="add_btn")}} &nbsp; 
+									</div>
+
+										<div id="formentry">
+									<small> Already have an account? <a class="ml-2" href="{{ url_for('login') }}"> Sign In </a></small>
+								</div>
+										</form>
+
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock register %}

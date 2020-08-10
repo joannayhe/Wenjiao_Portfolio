@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">	
+									<table data-vertable="ver2">
+									<tr><th></th>
+										</tr>
+										<tr>
+										<td style="min-width:400px">
+												<a href='report_menu'>Go Back To Report Menu</a>
+											<form method="POST" action"">
+												<fieldset> 
+													<legend>Dogs Surrendered By Months</legend>
+														<h2>
+															Dogs Surrendered By Months
+														</h2>
+														{% with messages = get_flashed_messages() %}
+															{% if messages %}
+													    		{% for message in messages %}
+																	<div>{{ message }}</div>
+													    		{% endfor %}
+													  		{% endif %}
+														{% endwith %}
+														<table class='table table.striped'>
+															<tr>
+																<th>Month</th>
+																<th>Total Surrendered Dog</th>
+															</tr>
+															{% for row in tables['tb'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.tot}}</td>
+															</tr>
+															{% endfor %}
+															</tr>
+														</table>
+														<br>
+														<br>
+														<table class='table table.striped'>
+															<tr>
+																<th>Month</th>
+																<th>DogID</th>
+																<th>DogSex</th>
+																<th>DogAlterStatus</th>
+																<th>MicrochipID</th>
+																<th>SurrenderDate</th>
+																<th>breed</th>
+															</tr>
+															{% for row in tables['tb1'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.DogID}}</td>
+																<td>{{row.DogSex}}</td>
+																<td>{{row.DogAlterStatus}}</td>
+																<td>{{row.MicrochipID}}</td>
+																<td>{{row.SurrenderDate}}</td>
+																<td>{{row.breed}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+														<br>
+														<br>
+													<legend>Dogs Stayed over 60 days</legend>
+														<h2>
+															Adopted Dogs Stayed over 60 Days
+														</h2>
+														<table class='table table.stripped'>
+															<tr>
+																<th>Month</th>
+																<th>Total Number</th>
+															</tr>
+															{% for row in tables['tb2'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.tot}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+														<br>
+														<table class='table table.stripped'>
+															<tr>
+																<th>month</th>
+																<th>Dogid</th>
+																<th>Dogsex</th>
+																<th>DogAlterStatus</th>
+																<th>MicrochipID</th>
+																<th>SurrenderDate</th>
+																<th>total_days</th>
+																<th>breed</th>
+															</tr>
+															{% for row in tables['tb3'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.DogID}}</td>
+																<td>{{row.DogSex}}</td>
+																<td>{{row.DogAlterStatus}}</td>
+																<td>{{row.MicrochipID}}</td>
+																<td>{{row.SurrenderDate}}</td>
+																<td>{{row.num_days}}</td>
+																<td>{{row.breed}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+														<br>
+														<br>
+														<h2>
+															Total Expense for Adopted Dogs by Months
+														</h2>
+														<table class='table table.stripped'>
+															<tr>
+																<th>month</th>
+																<th>total_amount</th>
+																<th>DogID</th>
+															</tr>
+															{% for row in tables['tb4'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.tot}}</td>
+																<td>{{row.DogID}}</td>
+															</tr>
+															{% endfor %}
+													</table>
+																									</fieldset>
+											</form>
+										</td>
+									</tr>
+								</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

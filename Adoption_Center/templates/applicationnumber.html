@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">	
+									<table data-vertable="ver2">
+										{% for user in appnumber %}
+										<h3>Application Completed. Your application number is {{user.ApplicationNumber}}</h3>
+										{% endfor %}
+									</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock content %}

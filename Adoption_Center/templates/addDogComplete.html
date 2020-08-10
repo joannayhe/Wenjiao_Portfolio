@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block addDog %}
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<tbody>
+							{% if fail is defined %}
+							<tr><td>{{fail}}</td></tr>
+							{% else %}
+								<tr><td>Dog Successfully added to the Database</td></tr>
+							<tr>
+								<td><a href="/DogDetails?dogID={{dogidval}}">View Dog Details</a></td></tr>
+							<tr>
+								<td><a href="{{ url_for('dashboard') }}">Go to Dog Dashboard</a></td></tr>
+							{% endif %}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock addDog %}

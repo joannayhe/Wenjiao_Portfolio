@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block login %}
+	<form method="POST" action"">
+		{{ form.hidden_tag() }}
+		<fieldset> 
+			<legend>Mutt House Login</legend>
+
+			{{ form.email.label }}
+				{% if form.email.errors %}
+					{%for error in form.email.errors %}
+						<span> {{ error }} </span>
+					{% endfor %}
+				{% endif %}
+			{{ form.email}}
+
+			{{ form.password.label }}
+				{% if form.password.errors %}
+					{%for error in form.password.errors %}
+						<span> {{ error }} </span>
+					{% endfor %}
+				{% endif %}
+			{{ form.password}}
+
+		</fieldset>
+{{ form.submit(class="login_btn")}} 
+
+	</form>
+
+{% endblock login %}

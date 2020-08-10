@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">	
+									<table data-vertable="ver2">
+									<tr><th></th>
+										</tr>
+										<tr>
+										<td style="min-width:400px">
+												<a href='report_menu'>Go Back To Report Menu</a>
+												{% with messages = get_flashed_messages() %}
+												{% if messages %}
+													{% for message in messages %}
+														<div>{{ message }}</div>
+    		{% endfor %}
+  		{% endif %}
+	{% endwith %}
+
+	<form action="" method="POST">
+		<fieldset> 
+			<legend>Volunteer Lookup</legend>
+		<div>
+			<lable>Search Name</lable>
+			<input type='text' name='inputstr' value={{request.form.inputstr}}>
+		</div>
+		<div>
+			<button type='submit'>
+				Search
+			</button>
+		</div>
+	</form>
+	<table class='table table.striped'>
+		<tr>
+			<th>User Email</th>
+			<th>User Phone Number</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+		</tr>
+		{% for row in tables %}
+		<tr>
+			<td>{{row.UserEmail}}</td>
+			<td>{{row.PhoneNumber}}</td>
+			<td>{{row.FirstName}}</td>
+			<td>{{row.LastName}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+																										</fieldset>
+											</form>
+										</td>
+									</tr>
+								</table>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

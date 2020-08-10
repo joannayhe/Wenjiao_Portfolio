@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">	
+									<table data-vertable="ver2">
+										{% if request.args.get('msgval') is defined %}
+										<tr><td colspan="2" style="color: red;padding:5px;">Please Ensure <b>MicrochipID</b> and <b>Altered Status</b> are updated before starting adoption!!!!</td></tr>
+										{% endif %}
+									<tr><th>Dog Details</th>
+										<th>Dog Expenses</th>
+										</tr>
+										<tr>
+										<td style="min-width:400px">
+											<form method="POST" action"">
+												{{ form.hidden_tag() }}
+												<fieldset> 
+													<legend>Dog Details</legend>
+														<table >
+															{% if agesyears is defined and agesyears > 0 %}
+																{% set agesyears = dresults.Months//12 %}
+															{%else %}
+																{% set agesyears = dresults.Months//12 %}
+															{% endif %}
+															{% if agesmonths is defined and agesmonths> 0 %}
+																{% set agesmonths = dresults.Months%12 %}
+															{%else %}
+																{% set agesmonths = dresults.Months%12 %}
+															{% endif %}
+
+															{% if agesmonths == 1 %}
+																{% set monthsval = 'Month' %}
+															{%endif %}
+															{% if agesmonths != 1 %}
+																{% set monthsval = 'Months' %}
+															{%endif %}
+															{% if agesyears == 1 %}
+																{% set yrval = 'Yr' %}
+															{%endif %}
+															{% if agesyears != 1 %}
+																{% set yrval = 'Yrs' %}
+															{%endif %}
+
+															{% if dresults.AdoptStatus == 0 %}
+																{% set anchortype = "href" %}
+																{% set classname = "adopt_btn" %}
+																{% set adoptval = request.args.get('dogID') %}
+																{% set adoptlink2 = adoptval %}
+															{% endif %}
+
+															{% if dresults.AdoptStatus != 0 %}
+																{% set anchortype = "name" %}
+																{% set classname = "adopted_btn" %}
+															{% endif %}
+
+														<tr><td width="150px">Dog Name: </td><td style="width:250px">{{ dresults.DogName }}</td></tr>
+														<tr><td width="150px">Dog Breed</td><td>
+														{% if dresults.combinedBreed == 'unknown'%}
+															{{ form.DogBreed(rows=6, multiple=True) }}
+														{% elif dresults.combinedBreed == 'mixed'%}
+															{{ form.DogBreed(rows=6, multiple=True) }}
+														{% elif dresults.combinedBreed == ''%}
+															{{ form.DogBreed(rows=6, multiple=True) }}
+														{% else %}
+															{{ dresults.combinedBreed }}
+														{% endif %}
+														</td></tr>
+														<tr><td width="150px">Dog Sex</td>
+															<td>
+														{% if dresults.Dogsex == 'unknown' %}
+															{{ form.DogSex }}
+														{% else %}
+															{{ dresults.Dogsex }}
+														{% endif %}
+														</td></tr>
+														<tr><td width="150px">Dog Age</td><td>{{ agesyears }} {{ yrval }} - {{ agesmonths }} {{ monthsval }}</td></tr>
+														<tr><td width="150px">Altered</td>
+														{% if dresults.DogAlterStatus != 1 %}
+															<td>{{ form.DogAlterStatus }}</td>
+														{%else %}
+															<td>{{ dresults.DogAlterStatus }}</td>
+															{% endif %}
+														</tr>
+
+														
+														<tr><td width="150px">Dog Description</td><td>{{ dresults.DogDescription }}</td></tr>
+														<tr><td width="150px">Microchip ID</td><td>
+														{% if dresults.MicrochipID == '' or dresults.MicrochipID == 'None' or dresults.MicrochipID == None or dresults.MicrochipID == NULL or dresults.MicrochipID == 'NULL' %}
+															{{ form.MicrochipID }}
+														{% else %}
+															{{ dresults.MicrochipID }}
+														{% endif %}
+
+														</td></tr>
+													
+														<tr><td width="150px">Surrender Date</td><td>{{ dresults.SurrenderDate }}</td></tr>
+														<tr><td width="150px">Surrender Reason</td><td>{{ dresults.SurrenderReason }}</td></tr>
+														<tr><td width="150px">AC - Surrender</td><td>{{ dresults.SurrenderAnimalControl }}</td></tr>
+														<tr><td width="150px">Adoptability Status</td><td><a {{ anchortype }}="addadoption?dogID={{adoptlink2 }}" class="{{ classname }}"></a></td></tr>
+														<tr><td width="150px">Add Expenses</td><td><a href="">
+
+															{% if dresults.AdoptStatus == 0 %}
+																<a href="addExpense?dogID={{request.args.get('dogID')}}">Add Expense</a>
+															{% else %}
+																Ineligible for new Expenses
+															{% endif %}
+
+														</td></tr>
+														</table>
+												</fieldset>
+												{{ form.submit()}} 
+											</form>
+										</td>
+										<td>
+											<table><tr><th>ExpenseID</th><th>DogID</th><th>VendorID</th><th>Date</th><th>Amount</th><th>Description</th></tr>
+												{% for dresultse in eresults %}
+												<tr><td>{{dresultse.ExpenseID}}</td><td>{{dresultse.DogID}}</td><td>{{dresultse.VendorID}}</td><td>{{dresultse.ExpenseDate}}</td><td>{{dresultse.ExpenseAmount}}</td><td>{{dresultse.ExpenseDescripton}}</td></tr>
+												{% endfor %}
+
+											</table>
+										</td>
+
+								</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock content %}
+

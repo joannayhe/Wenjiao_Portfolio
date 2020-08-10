@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jul 11 14:49:06 2020
+
+@author: admin
+"""
+
+<h1>Add Adoption Application</h1>
+
+<h3><a href="newapplication">Click</a> to start a new application</h3>
+
+<table border = 1>
+    {% for user in appnumber %}
+       <tr>
+        <td> {{user.AdopterEmail}}</td>
+        <td> {{user.AdPhoneNumber}}</td>
+        <td> <a href="contactinfo?appid={{user.ApplicationNumber}}&useremail={{user.AdopterEmail}}">Edit</a></td>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">	
+									<table data-vertable="ver2">
+									<tr><th></th>
+										</tr>
+										<tr>
+										<td style="min-width:400px">
+												<a href='report_menu'>Go Back To Report Menu</a>
+											<form method="POST" action"">
+												<fieldset> 
+													<Lengend>MosHouse</Lengend>
+														<h1>
+															Monthly Adoption Report
+														</h1>
+													<br>
+													<br>
+													<body>
+														<h2>
+															Monthly Surrendered Dogs
+														</h2>
+														<table class='table table.striped'>
+															<tr>
+																<th>Month</th>
+																<th>Breed</th>
+																<th>Total Number</th>
+															</tr>
+															{% for row in tables['tb1'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.BreedType}}</td>
+																<td>{{row.tot}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+														<br>
+														<h2>
+															Monthly Adopted Dogs
+														</h2>
+														<table class='table table.striped'>
+															<tr>
+																<th>Month</th>
+																<th>Breed</th>
+																<th>Total Number</th>
+															</tr>
+															{% for row in tables['tb2'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.BreedType}}</td>
+																<td>{{row.tot}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+														<br>
+														<h2>
+															Monthly Expenses and Profit
+														</h2>
+														<table class='table table.striped'>
+															<tr>
+																<th>Month</th>
+																<th>Total Expense</th>
+																<th>Total Adoption Fee</th>
+																<th>Net Profit</th>
+																<th>BreedType</th>
+															</tr>
+															{% for row in tables['tb3'] %}
+															<tr>
+																<td>{{row.month}}</td>
+																<td>{{row.total_expense}}</td>
+																<td>{{row.total_fee}}</td>
+																<td>{{row.net_profit}}</td>
+																<td>{{row.BreedType}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+	
+																									</fieldset>
+												</form>
+											</td>
+										</tr>
+									</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

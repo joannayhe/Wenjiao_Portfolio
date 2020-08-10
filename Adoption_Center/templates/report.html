@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MosHouse</title>
+		<a href='report_menu'>Go to report menu</a>
+	</head>
+	<body>
+		<h1>Heading One</h1>
+		<h2>Heading Two</h2>
+		<p>
+			lorem <a href='http://google.com' target='_blank'>lorem</a> lorem
+		</p>
+		
+		<!-- Lists -->
+		<!-- unordered lists -->
+		<ul>
+			<li>List Item 1</li>
+			<li>list Item 2</li>
+		</ul>
+		
+		<!-- ordered list -->
+		<ol>
+			<li>List Item 1</li>
+			<li>list Item 2</li>
+		</ol>
+		
+		<table>
+		</table>
+		
+		<br>
+		<hr>
+		<br>
+		
+		<!-- Forms -->
+		<form action="{{ url_for('index') }}" method="POST">
+			<div>
+				<lable>First Name</lable>
+				<input type='var' name="first_name">
+			</div>
+			<br>
+			<div>
+				<lable>Last Name</lable>
+				<input type='var' name="last_name">
+			</div>
+			<br>
+			<div>
+				<lable>Email</lable>
+				<input type='email' name="email">
+			</div>
+			<br>
+			<div>
+				<lable>Message</lable>
+				<textarea name='message'></textarea>
+			</div>
+			
+			<br>
+			<div>
+				<lable>Gender</lable>
+				<select name='gender'>
+					<option value='male'>Male</option>
+					<option value='female'>Female</option>
+				</select>
+			</div>
+			
+			<br>
+			<div>
+				<lable>Age:</lable>
+				<input type='number' name='age' value='30'>
+			</div>
+			
+			<br>
+			<div>
+				<lable>Birthday</lable>
+				<input type='date' name='birthday'>
+			</div>
+			<br>
+			<input type='submit' name='submit' value='Submit'>
+		</form>
+		
+		
+		<!-- Button -->
+		<button click='blabla'>Click Me</button>
+		
+		<!-- Image -->
+		<br>
+		<a href='japan.jpg'>
+			<img src='japan.jpg' alt='my sample image' width='200'>
+		</a>
+		
+		<br>
+		<!-- quotations -->
+		
+	</body>
+
+</html>

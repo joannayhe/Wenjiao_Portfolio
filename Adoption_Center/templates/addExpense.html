@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block addExpense %}
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<tbody>
+							<tr>
+								<td >
+								<form method="POST" action"">
+									{{ form.hidden_tag() }}
+									<fieldset> 
+										<legend>Add A New Expense</legend>
+
+										<div id="dogentry">
+										{{ form.ExpenseAmount.label (class="frm-lbl")}}
+										{{ form.ExpenseAmount (class="frm-inpt")}}
+										</div>
+										<div id="dogentry">
+										{{ form.ExpenseDescription.label (class="frm-lbl")}}
+										{{ form.ExpenseDescription  (rows="2", cols="20")}}
+										</div>
+
+
+										<div id="dogentry">
+										{{ form.VendorName.label (class="frm-lbl")}}
+											{{ form.VendorName(rows=1) }}
+										</div>
+
+										
+									<div id="dogentry2">
+									{{ form.submit(class="adddog_btn")}}
+									</div>
+									
+									<div id="dogentry2">
+										<small class="smbottom">Complete Dog Entry</small>
+									</div>
+
+									</fieldset>
+
+
+
+									</form>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock addExpense %}

@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<thead>
+							<tr class="row100 head">
+								<th width="10px">&nbsp;</th>
+								<th class="column100 column1" data-column="column1">Dog Name</th>
+								<th class="column100 column2" data-column="column2">Dog Breed</th>
+								<th class="column100 column3" data-column="column3">Dog Sex</th>
+								<th class="column100 column4" data-column="column4">Dog Age</th>
+								<th class="column100 column4" data-column="column4">Altered(?)</th>
+								<th class="column100 column5" data-column="column5">Adoptability Status</th>
+								<th class="column100 column6" data-column="column6">Edit Dog</th>
+								<th class="column100 column7" data-column="column7">Add Expenses</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for dataval in dresults %}
+						{% set agesyears = dataval.Months//12 %}
+						{% set agesmonths = dataval.Months%12 %}
+
+						{% if agesmonths == 1 %}
+							{% set monthsval = 'Month' %}
+						{%endif %}
+						{% if agesmonths != 1 %}
+							{% set monthsval = 'Months' %}
+						{%endif %}
+						{% if agesyears == 1 %}
+							{% set yrval = 'Yr' %}
+						{%endif %}
+						{% if agesyears != 1 %}
+							{% set yrval = 'Yrs' %}
+						{%endif %}
+
+						{% if dataval.AdoptStatus == 0 %}
+						{% set anchortype = "href" %}
+						{% set classname = "adopt_btn" %}
+							{% set adoptlink2 = dataval.DogID %}
+
+						{% endif %}
+						{% if dataval.AdoptStatus != 0 %}
+						{% set anchortype = "name" %}
+						{% set classname = "adopted_btn" %}
+						{% endif %}
+							<tr class="row100">
+								<td>&nbsp;</td>
+								<td class="column100 column1" data-column="column1">{{ dataval.DogName }}</td>
+								<td class="column100 column2" data-column="column2">{{ dataval.Breed }}</td>
+								<td class="column100 column3" data-column="column3">{{ dataval.DogSex }}</td>
+								<td class="column100 column4" data-column="column4">{{ agesyears }} {{ yrval }} - {{ agesmonths }} {{ monthsval }}</td>
+								<td>
+									{% if dataval.DogAlterStatus == 0 %}
+										{%set fixed = 'No' %}
+									{% else %} 
+										{% set fixed = 'Yes' %}
+									{%endif %}
+									{{ fixed }}
+								</td>
+								<td class="column100 column5" data-column="column5"><a {{ anchortype }}="addadoption?dogID={{dataval.DogID }}" class="{{ classname }}"></a></td>
+								<td class="column100 column6" data-column="column6"><a href="DogDetails?dogID={{dataval.DogID }}">Edit/View Dog</a></td>
+								<td class="column100 column7" data-column="column7">
+									{% if dataval.AdoptStatus == 0 %}
+										<a href=""><a href="addExpense?dogID={{dataval.DogID }}">Add Expense</a>
+									{% else %} 
+										Ineligible for new expenses
+									{% endif %}
+
+								</td>
+							</tr>
+						{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock content %}
+

@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110"> 
+                                <table data-vertable="ver2">
+                                    <form method="POST" action="">
+                                    {% for user in Applications %}
+                                    <tr><td></td></tr>
+                                        <tr>
+                                            <td> {{user.ApplicationNumber}} </td>
+                                            <td> {{user.AdopterFname}} </td>
+                                            <td> {{user.AdopterLname}} </td>
+                                            <td> {{user.Co_Lname}} </td>
+                                            <td> {{user.Co_Fname}} </td>
+                                            <td> {{user.AdopterEmail}} </td>
+                                            <td> <a href="applicationreview?appID={{user.ApplicationNumber}}">Edit Application Status </a></td>                       
+                                        </tr>
+                                    {% endfor %}
+                                    <tr><td>
+                                        
+                                    </td>
+                                    </tr>
+                                    </form>
+                                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+

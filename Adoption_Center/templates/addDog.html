@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% block addDog %}
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<tbody>
+							<tr>
+								<td >
+								<form method="POST" action"">
+									{{ form.hidden_tag() }}
+									<fieldset> 
+										<legend>Add A New Dog</legend>
+										<div id="dogentry">
+										{{ form.DogName.label (class="frm-lbl")}}
+										{% if form.DogName.error %}
+											{%for error in form.DogName.errors %}
+												<span> {{ error }} </span>
+											{% endfor %}
+										{% endif %}
+										{{ form.DogName  (class="frm-inpt")}}
+										</div>
+
+										<div id="dogentry">
+										{{ form.DogAgeYears.label (class="frm-lbl")}}
+										{% if form.DogAgeYears.error %}
+											{%for error in form.DogAgeYears.errors %}
+												<span> {{ error }} </span>
+											{% endfor %}
+										{% endif %}
+										{{ form.DogAgeYears (class="frm-inpt")}}
+										</div>
+
+										<div id="dogentry">
+										{{ form.DogAgeMonths.label (class="frm-lbl")}}
+										{% if form.DogAgeMonths.error %}
+											{%for error in form.AgeMonths.errors %}
+												<span> {{ error }} </span>
+											{% endfor %}
+										{% endif %}
+										{{ form.DogAgeMonths (class="frm-inpt")}}
+										</div>
+
+										<div id="dogentry">
+										{{ form.SurrenderReason.label (class="frm-lbl")}}
+										{% if form.SurrenderReason.error %}
+											{%for error in form.SurrenderReason.errors %}
+												<span> {{ error }} </span>
+											{% endfor %}
+										{% endif %}
+										{{ form.SurrenderReason  (class="frm-inpt")}}
+									</div>
+
+										<div id="dogentry">
+										{{ form.DogDescription.label (class="frm-lbl")}}
+										{% if form.DogDescription.error %}
+											{%for error in form.DogDescription.errors %}
+												<span> {{ error }} </span>
+											{% endfor %}
+										{% endif %}
+										{{ form.DogDescription  (class="frm-inpt")}}
+									</div>
+
+										<div id="dogentry">
+										{{ form.MicrochipID.label (class="frm-lbl")}}
+										{{ form.MicrochipID  (class="frm-inpt")}}
+									</div>
+
+									<div id="dogentry">
+										{{ form.DogSex.label (class="frm-lbl")}}
+										{{ form.DogSex  (class="frm-inpt")}}
+									</div>
+									
+									<div id="dogentry">
+										{{ form.DogAlterStatus.label (class="frm-lbl")}}
+										{{ form.DogAlterStatus  (class="frm-inpt")}}
+									</div>
+
+									<div id="dogentry">
+										{{ form.SurrenderAnimalControl.label (class="frm-lbl")}}
+										{{ form.SurrenderAnimalControl  (class="frm-inpt")}}
+									</div>
+
+									<div id="dogentry">
+										{{ form.DogBreed.label (class="frm-lbl")}}
+										<br>
+										{{ form.DogBreed(rows=6, multiple=True) }}
+									</div>
+
+									<div id="dogentry2">
+									{{ form.submit(class="adddog_btn")}}
+									</div>
+									
+									<div id="dogentry2">
+										<small class="smbottom">Complete Dog Entry</small>
+									</div>
+
+									</fieldset>
+
+
+
+									</form>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock addDog %}

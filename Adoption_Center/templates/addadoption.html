@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110">
+                	<table>
+                		{% if retstat is defined %}
+                			<h1> You do not have Admin Permissions</h1>
+                			{% else %}
+
+		                		<form method="POST" action"">
+		                			{{ form.hidden_tag() }}
+		                			<fieldset>
+		                				<legend>Find Adopter</legend>
+		                				<input type="hidden" name="dogID" value="{{ request.args.get('dogID') }}">
+
+												<div id="dogentry">
+												{{ form.AdopterLname.label (class="frm-lbl")}}
+												{{ form.AdopterLname (class="frm-inpt")}}
+												</div>
+												<div id="dogentry">
+												{{ form.co_lname.label (class="frm-lbl")}}
+												{{ form.co_lname (class="frm-inpt")}}
+												</div>
+											<div id="dogentry2">
+												{{ form.submit}}
+											</div>
+										</fieldset>
+									</form>
+						{% endif %}
+					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

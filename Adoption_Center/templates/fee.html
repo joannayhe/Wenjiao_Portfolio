@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110">                    
+                    
+                    <form method="POST" action="">
+                        <fieldset>
+                    <table>
+
+                            <legend>Complete Adoption</legend>
+                            <input type="hidden" name="AdoptionDate" value={{date}}>
+                            <input type="hidden" name="AdoptionFee" value={{exptot}}>
+                            <input type="hidden" name="Aemail" value={{Details.AdopterEmail}}>
+                            <input type="hidden" name="ApplicationNumber" value={{request.args.get('appnum')}}>
+                            <input type="hidden" name="DogID" value={{dogid}}>
+                            <tr>
+                                <td>Dog ID</td><td>{{dogid}}</td></tr>
+                            <tr>
+                                <td>Application ID</td><td>{{request.args.get('appnum')}}</td></tr>
+                            <tr>
+                                <td>Adoption Fee</td><td>{{exptot}}</td></tr>
+                            <tr>
+                                <td>Adoption Date</td><td>{{date }}</td></tr>
+                            <tr>
+                                <td>Adopter Email</td><td>{{Details.AdopterEmail}}</td></tr>
+                            <tr>
+                                <td> 
+                                            <input type="submit" value="Complete Adoption">
+                                </td>
+                                <td></td>
+                            </tr>
+                    </fieldset>
+
+                    </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

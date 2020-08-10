@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">	
+									<table data-vertable="ver2">
+									<tr><th></th>
+										</tr>
+										<tr>
+										<td style="min-width:400px">
+												<a href='report_menu'>Go Back To Report Menu</a>
+											<form method="POST" action"">
+												<fieldset> 
+													<legend>Vendors List</legend>
+														<table class='table table.striped'>
+															<tr>
+																<th>Vendor ID</th>
+																<th>Vendor Name</th>
+															</tr>
+															{% for row in tables['tb1'] %}
+															<tr>
+																<td>{{row.VendorID}}</td>
+																<td>{{row.VendorName}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+														<br>
+														<h2>
+															Expense from Vendors
+														</h2>
+														<table class='table table.striped'>
+															<tr>
+																<th>Vendor ID</th>
+																<th>Total Amount</th>
+															</tr>
+															{% for row in tables['tb2'] %}
+															<tr>
+																<td>{{row.VendorID}}</td>
+																<td>{{row.tot}}</td>
+															</tr>
+															{% endfor %}
+														</table>
+
+																										</fieldset>
+											</form>
+										</td>
+									</tr>
+								</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock content %}
