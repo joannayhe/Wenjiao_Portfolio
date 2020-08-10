@@ -18,3 +18,4 @@
 
 
 <img src="./project_images/dashboard.GIF" width="250" height="150"/> <img src="./project_images/add.GIF" width="250" height="150"/>
+<img src="./project_images/report1.GIF" width="250" height="150"/> <img src="./project_images/report2.GIF" width="250" height="150"/>
