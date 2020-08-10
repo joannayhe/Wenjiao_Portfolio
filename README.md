@@ -15,3 +15,6 @@
 1. Designed Information Flow Diagram (IFD) and Enhanced Entity-Relationship (EER) Diagram for the adoption center
 2. Wrote SQL to implement the logic on the database. Including login, register, add new data, query data from database, etc.
 3. Design and implement the front end UI and back end database by Python and MySQL.
+
+
+<img src="/project_images/dashboard.GIF" width="250"/> <img src="/project_images/add.GIF" width="250"/>
