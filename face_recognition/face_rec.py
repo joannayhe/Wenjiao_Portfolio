@@ -88,24 +88,6 @@ with zipfile.ZipFile('readonly/small_img.zip','r') as test_zip:
 # In[ ]:
 
 
-with zipfile.ZipFile('readonly/images.zip','r') as img_zip:
-    lst=img_zip.namelist()
-    #print(lst)
-    for i in lst:
-        #i=lst[0]
-        img_name=img_zip.open(i)
-        img=Image.open(img_name)
-        img.save('img.png')
-        img_num=cv.imread('img.png')
-        #print(img_num)
-        check=char_rec(img_num, 'Mark')
-        if check:
-            detect_faces(img_num)
-            
-
-
-# In[ ]:
-
 
 
 
