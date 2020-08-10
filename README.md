@@ -27,4 +27,4 @@
 2. The result shoule return a contact sheet of all of the faces which were located on the newspaper page which mentions the imput keyword (implement by OpenCV, PIL)
 
 
-<img src="./project_images/a-0.png" width="250"/> <img src="./project_images/Capture" width="250"/>
+<img src="./project_images/a-0.png" width="250"/> <img src="./project_images/Capture.GIF" width="250"/>
