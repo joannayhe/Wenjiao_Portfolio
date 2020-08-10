@@ -1,4 +1,4 @@
-# [Project 1. Trading Agent for Stock Market](https://github.gatech.edu/whuang98/ML4T/tree/master/ML4T_2020Spring/strategy_evaluation)
+# [Project 1. Trading Agent for Stock Market](https://github.com/joannayhe/Wenjiao_Portfolio/tree/master/Trading_Strategy)
 *Project Overview*
 1. Do stock historical data cleaning by Numpy and Pandas
 2. Using reinforcement learning algorithms to train historical data 
