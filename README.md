@@ -17,4 +17,4 @@
 3. Design and implement the front end UI and back end database by Python and MySQL.
 
 
-<img src="./project_images/dashboard.GIF" width="250" height="200"/> <img src="./project_images/add.GIF" width="250"/>
+<img src="./project_images/dashboard.GIF" width="250" height="150"/> <img src="./project_images/add.GIF" width="250"/>
