@@ -29,4 +29,4 @@
 
 <img src="./project_images/a-0.png" width="250"/> <img src="./project_images/a-1.png" width="250"/>
 <img src="./project_images/a-2.png" width="250"/><img src="./project_images/a-3.png" width="250"/>
-<img src="./project_images/Capture.GIF" width="300"/>
+<img src="./project_images/Capture.GIF" width="500"/>
