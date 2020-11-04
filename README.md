@@ -1,7 +1,7 @@
 # Project 1. Wildfire Prediction App (In progress)
 *Project Overview*
-1. Scrap and join big datasets (>100GB) of meterological, topographical, and fire index data via Google Engine API and satellite remote sensors into PostgreSQL
-2. Multivariate Analysis and feature engineering with data mining techniques using PySpark and AWS
+1. Scrap and join big datasets (>100GB) of meterological, topographical, and fire index data via Google Engine API and satellite remote sensors into PostgreSQL database
+2. Multivariate Analysis and feature engineering with various data mining techniques using PySpark and AWS
 3. Modeling imbalanced fire occurence datasets on various classification algorithms (Random Forest, Neural Newtorks, SVM, etc)
 4. User Interface to build chloropleth maps of high fire risk areas using D3
 
