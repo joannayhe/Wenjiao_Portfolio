@@ -1,4 +1,4 @@
-# [Project 1. Wildfire Prediction App (Coming Soon: December 2020)]
+# Project 1. Wildfire Prediction App (Coming Soon: December 2020)
 *Project Overview*
 1. Scrap and join big datasets (>100GB) via Google Engine API and satellite remote sensors into PostgreSQL
 2. Multivariate Analysis and feature engineering with data mining techniques using PySpark and AWS
